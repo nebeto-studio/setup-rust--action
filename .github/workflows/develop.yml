@@ -30,10 +30,10 @@ jobs:
     steps:
       - id: checkout-code
         name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - id: create-or-get-existing-draft-pull-request
         name: Create or get an existing draft Pull Request on Github
-        uses: nebetoxyz/create-pull-request--action@v1.14.0
+        uses: nebetoxyz/create-pull-request--action@1ca7ea7e2434e6df3b3eec192a2ccaa3512b2376 # v1.14.0
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           assignees: ${{ github.actor }}
@@ -48,7 +48,7 @@ jobs:
     steps:
       - id: checkout-code
         name: Checkout code
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           ref: ${{ github.ref }}
       - id: setup-rust
